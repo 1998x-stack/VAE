@@ -19,7 +19,7 @@ def visualize_data(data, target):
     # Iterate over the 9 subplots
     for i in range(9):
         # Display the i-th image in the current subplot
-        ax[i // 3, i % 3].imshow(data[i].unsqueeze(0).numpy())
+        ax[i // 3, i % 3].imshow(data[i].squeeze(0).numpy())
 
         # Set the title of the current subplot to the corresponding target label
         ax[i // 3, i % 3].set_title(target[i].item(), fontsize=50)
